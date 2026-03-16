@@ -8,3 +8,11 @@ createRoot(document.getElementById('root')!).render(
     <App />
   </StrictMode>,
 )
+import { AuthProvider } from './features/auth/AuthContext';
+createRoot(document.getElementById('root')!).render(
+ <StrictMode>
+ <AuthProvider>
+ <App />
+ </AuthProvider>
+ </StrictMode>
+);
