@@ -4,6 +4,7 @@ interface Project { id: string; name: string; color: string; }
 interface SidebarProps { projects: Project[]; isOpen: boolean; }
 
 export default function Sidebar({ projects, isOpen }: SidebarProps) {
+  console.log('Sidebar re-render');
   return (
     <aside className={`${styles.sidebar} ${isOpen ? styles.open : styles.closed}`}>
       <h2 className={styles.title}>Mes Projets</h2>
